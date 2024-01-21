@@ -10,10 +10,33 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            HStack {
+                Text("Barcode Scanner")
+                    .font(.title)
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            Spacer()
+            
+            Rectangle()
+                .frame(height: 0250)
+            
+            Spacer()
+            VStack {
+                HStack{
+                    Image(systemName: "barcode.viewfinder")
+                        .imageScale(.large)
+                        .foregroundStyle(.tint)
+                    Text("Scanned Barcode")
+                        .font(.title2)
+                }
+                .padding(10)
+                Text("01234567890")
+                    .font(.title)
+            }
+            
+            Spacer()
+            
         }
         .padding()
     }
